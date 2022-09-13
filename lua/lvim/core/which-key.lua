@@ -77,6 +77,12 @@ M.config = function()
     -- see https://neovim.io/doc/user/map.html#:map-cmd
     vmappings = {
       ["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle linewise (visual)" },
+      ["s"] = {
+        name = "Sort",
+        a = { "<cmd>'<, '>%sort<cr>", "ASC" },
+        d = { "<cmd>'<, '>%sort!<cr>", "DESC" },
+        n = { "<cmd>'<, '>%sort n<cr>", "DESC" },
+      },
     },
     mappings = {
       [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
